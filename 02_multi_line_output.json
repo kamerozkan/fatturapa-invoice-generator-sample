@@ -1,0 +1,53 @@
+{
+  "inputIndex": 0,
+  "invoiceNumber": "INV-2026-0002",
+  "processingStatus": "SUCCEEDED",
+  "conformanceStatus": "ACCEPTED",
+  "artifactDelivered": true,
+  "artifactKey": "ARTIFACT-0001-INV-2026-0002.xml",
+  "evidenceKey": "EVIDENCE-0001.json",
+  "evidence": {
+    "evidenceVersion": "1.0",
+    "product": "fatturapa",
+    "invoiceNumber": "INV-2026-0002",
+    "artifactSha256": "f28bea2ba025e8002a4a91bacedf50df550ea3d4137f3f34a51f799e8212662a",
+    "artifactBytes": 3811,
+    "mediaType": "application/xml",
+    "standard": "FatturaPA",
+    "versions": {
+      "generator": "0.1.0",
+      "standard": "FPR12 XSD 1.2.3",
+      "ruleset": "FPR12 1.2.3 derived compatibility XSD preflight"
+    },
+    "validation": {
+      "status": "ACCEPTED",
+      "scope": "PINNED_OFFLINE_TECHNICAL_PREFLIGHT",
+      "engine": "lxml XMLSchema",
+      "scenario": "FatturaPA FPR12 1.2.3 compatibility preflight",
+      "profile": "FATTURAPA_FPR12",
+      "counts": {
+        "fatal": 0,
+        "error": 0,
+        "warning": 0,
+        "information": 0
+      },
+      "findings": [],
+      "findingsTruncated": false
+    },
+    "generatedAt": "2026-07-30T09:15:10Z",
+    "transmitted": false,
+    "acceptedByNetwork": null,
+    "networkIdentifier": null,
+    "signed": false,
+    "archived": false,
+    "scope": "PINNED_OFFLINE_TECHNICAL_PREFLIGHT"
+  },
+  "error": null,
+  "sampleProvenance": {
+    "kind": "LOCAL_ENGINE_OUTPUT",
+    "apifyRun": false,
+    "liveActorOutput": false,
+    "actorPublicationStatus": "PRIVATE_RELEASE_PENDING",
+    "repositoryAnnotation": true
+  }
+}
