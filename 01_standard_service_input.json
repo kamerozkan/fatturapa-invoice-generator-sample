@@ -1,0 +1,59 @@
+{
+  "invoice": {
+    "invoice_number": "INV-2026-0001",
+    "issue_date": "2026-07-29",
+    "due_date": "2026-08-28",
+    "delivery_date": "2026-07-29",
+    "currency": "EUR",
+    "invoice_type_code": "380",
+    "buyer_reference": "BUYER-REF-1001",
+    "purchase_order_reference": "PO-2026-1001",
+    "seller": {
+      "name": "Fornitore Esempio SRL",
+      "address": {
+        "line1": "Via Roma 10",
+        "city": "Milano",
+        "postal_code": "20121",
+        "country_code": "IT",
+        "region": "MI"
+      },
+      "vat_id": "IT12345678901",
+      "tax_id": "12345678901",
+      "registration_id": "MI-1234567"
+    },
+    "buyer": {
+      "name": "Cliente Esempio SRL",
+      "address": {
+        "line1": "Via Torino 20",
+        "city": "Roma",
+        "postal_code": "00184",
+        "country_code": "IT",
+        "region": "RM"
+      },
+      "vat_id": "IT98765432109",
+      "tax_id": "98765432109"
+    },
+    "lines": [
+      {
+        "id": "1",
+        "description": "Servizi di consulenza",
+        "quantity": "2",
+        "unit_code": "HUR",
+        "unit_price": "500.00",
+        "tax_rate": "22",
+        "tax_category": "S"
+      }
+    ],
+    "payment": {
+      "means_code": "30",
+      "reference": "INV-2026-0001",
+      "iban": "IT60X0542811101000000123456"
+    },
+    "notes": [],
+    "extensions": {
+      "recipient_code": "ABC1234",
+      "transmission_progressive": "00001",
+      "seller_tax_regime": "RF01"
+    }
+  }
+}
