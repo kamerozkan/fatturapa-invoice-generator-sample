@@ -1,0 +1,59 @@
+{
+  "invoice": {
+    "invoice_number": "INV-2026-0003",
+    "issue_date": "2026-09-01",
+    "due_date": "2026-10-01",
+    "delivery_date": "2026-09-01",
+    "currency": "EUR",
+    "invoice_type_code": "380",
+    "buyer_reference": "BUYER-REF-1003",
+    "purchase_order_reference": "PO-2026-1003",
+    "seller": {
+      "name": "Fornitore Esempio SRL",
+      "address": {
+        "line1": "Via Roma 10",
+        "city": "Milano",
+        "postal_code": "20121",
+        "country_code": "IT",
+        "region": "MI"
+      },
+      "vat_id": "IT12345678901",
+      "tax_id": "12345678901",
+      "registration_id": "MI-1234567"
+    },
+    "buyer": {
+      "name": "Cliente Esempio SRL",
+      "address": {
+        "line1": "Via Torino 20",
+        "city": "Roma",
+        "postal_code": "00184",
+        "country_code": "IT",
+        "region": "RM"
+      },
+      "vat_id": "IT98765432109",
+      "tax_id": "98765432109"
+    },
+    "lines": [
+      {
+        "id": "1",
+        "description": "Monthly compliance platform access",
+        "quantity": "12",
+        "unit_code": "MON",
+        "unit_price": "49.90",
+        "tax_rate": "22",
+        "tax_category": "S"
+      }
+    ],
+    "payment": {
+      "means_code": "30",
+      "reference": "INV-2026-0003",
+      "iban": "IT60X0542811101000000123456"
+    },
+    "notes": [],
+    "extensions": {
+      "recipient_code": "ABC1234",
+      "transmission_progressive": "00003",
+      "seller_tax_regime": "RF01"
+    }
+  }
+}
