@@ -1,0 +1,15 @@
+{
+  "id": "uBma2hAnbaMCWqLMv",
+  "name": "fatturapa-invoice-generator",
+  "title": "FatturaPA Invoice Generator",
+  "description": "Generate FPR12 or FPA12 FatturaPA 1.2.3 XML with advanced tax, reference, payment, and attachment support plus offline SdI technical checks.",
+  "seoTitle": "FatturaPA Invoice Generator - JSON to SdI XML",
+  "seoDescription": "Generate Italy FatturaPA FPR12 or FPA12 XML from JSON with tax, payment and attachment support. Run offline technical checks before SdI submission.",
+  "isPublic": true,
+  "url": "https://apify.com/kamerozkan/fatturapa-invoice-generator",
+  "checkedAt": "2026-09-30",
+  "changeScope": "listing metadata and sample documentation only",
+  "runtimeChanged": false,
+  "schemasChanged": false,
+  "examplesRegenerated": false
+}
