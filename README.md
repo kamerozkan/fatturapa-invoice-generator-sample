@@ -14,8 +14,9 @@ Generate FPR12 or FPA12 FatturaPA 1.2.3 XML with advanced tax, reference, paymen
 Generate Italian FatturaPA FPR12 invoice XML from structured JSON and run the pinned 1.2.3 compatibility Schema preflight.
 
 This flat sample repository contains three paired JSON inputs and outputs,
-the exact Actor input and dataset schema snapshots, and a standard JSON Schema
-for one dataset row. The examples were generated and technically evaluated by
+the October 4 input schema snapshot verified against public release 1.0.3,
+the existing Actor dataset schema snapshot, and a standard JSON Schema for one
+dataset row. The examples were generated and technically evaluated by
 the local release engine. They are not copied from a live Apify run.
 
 Search topics: FatturaPA generator, JSON to FatturaPA XML, Italy e-invoice API, FPR12 invoice, Sistema di Interscambio, SdI.
@@ -29,6 +30,15 @@ Search topics: FatturaPA generator, JSON to FatturaPA XML, Italy e-invoice API, 
 5. Runs the pinned FatturaPA FPR12 1.2.3 compatibility XML Schema.
 6. Delivers only an artifact accepted by the complete pinned local preflight.
 7. Returns SHA-256, byte count, versions, findings, and explicit scope limits.
+
+## Quick start
+
+Use [`current-schema-input.json`](current-schema-input.json) as the starting
+input for the current Actor. Copy its synthetic JSON into the Actor input editor
+and replace the invoice fields for your workflow. This starter uses the current
+`extensions.fatturapa` structure and passes a local schema check. It has no new
+paired runtime output. The three paired examples below remain historical local
+fixtures and use the former extensions structure.
 
 ## Three paired examples
 
@@ -51,6 +61,39 @@ charge occurred.
   UNECE unit codes.
 - Each seller and buyer needs a tax, VAT, or registration identifier.
 - The complete snapshot is [`actor_input_schema.json`](actor_input_schema.json).
+
+## Input storage maintenance on October 4, 2026
+
+The input schema snapshot now marks the JSON `invoice` object and `invoices`
+array as `isSecret: true`. Public `latest` build `1.0.3` and all deployed source
+hashes were verified on October 4. The schema hash is recorded in the
+maintenance evidence below.
+
+In supported Apify input storage, these flags encrypt the marked values before
+storing the run's `INPUT`. The Actor keeps Python `apify==4.0.0` and reads input
+with `Actor.get_input()`, which supports automatic decoding of secret objects
+and arrays. See the [Apify secret input documentation](https://docs.apify.com/actors/development/actor-definition/input-schema/secret-input).
+Existing stored inputs were not audited or migrated by this maintenance.
+
+This change keeps the runtime, dependencies, prices, dataset contract, and
+recorded output files unchanged. The input snapshot also synchronizes fields
+already present in the current Actor source; those pre-existing differences
+from the historical repository schema are separate from the two new privacy
+flags. Generated documents, dataset rows, and downloads are not encrypted by
+these flags. Manage their access and retention separately.
+
+Local checks validated the known single and batch schema-prefill inputs. No new
+encrypted end-to-end Actor run was performed. Historical July 30 examples retain
+their original provenance and are not output from this release. Read the
+[maintenance evidence](INPUT_PRIVACY_MAINTENANCE_2026-10-04.json) for the exact scope and schema hash.
+
+For a schema-compatible starting input, use
+[`current-schema-input.json`](current-schema-input.json). It uses the public
+schema's synthetic prefill and includes the current `extensions.fatturapa`
+structure. The three historical paired inputs use the former flat extensions
+structure and fail the current schema at that field. Their paired outputs stay
+unchanged as historical local-engine evidence. The new input has only been
+schema-checked; no new generated output is included.
 
 ## Dataset output contract
 
